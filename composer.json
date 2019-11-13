@@ -41,6 +41,6 @@
     },
     "replace": {
         "imag/ldap-bundle": "self.version",
-    }
+    },
     "target-dir": "IMAG/LdapBundle"
 }

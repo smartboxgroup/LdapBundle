@@ -40,7 +40,7 @@
         "psr-0": { "IMAG\\LdapBundle": "" }
     },
     "replace": {
-        "imag/ldap-bundle": "self.version",
+        "imag/ldap-bundle": "self.version"
     },
     "target-dir": "IMAG/LdapBundle"
 }

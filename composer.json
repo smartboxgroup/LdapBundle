@@ -1,6 +1,6 @@
 {
-    "name": "imag/ldap-bundle",
-    "description": "LDAP Bundle for Symfony 2",
+    "name": "smartbox/ldap-bundle",
+    "description": "LDAP Bundle for Symfony 3",
     "homepage": "http://github.com/BorisMorel/LdapBundle",
     "license": "CeCILL",
     "authors": [
@@ -34,11 +34,13 @@
     "require": {
         "php": ">=5.3.3",
         "ext-ldap": "*",
-        "symfony/symfony": ">2.0"
+        "symfony/symfony": "^2.0 || ^3.0"
     },
     "autoload": {
         "psr-0": { "IMAG\\LdapBundle": "" }
     },
-
+    "replace": {
+        "imag/ldap-bundle": "self.version",
+    }
     "target-dir": "IMAG/LdapBundle"
 }

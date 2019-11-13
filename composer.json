@@ -2,7 +2,7 @@
     "name": "smartbox/ldap-bundle",
     "description": "LDAP Bundle for Symfony 3",
     "homepage": "http://github.com/BorisMorel/LdapBundle",
-    "license": "CeCILL",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Boris Morel",

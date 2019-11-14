@@ -14,12 +14,13 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface,
     Symfony\Component\Security\Http\Authentication\AuthenticationSuccessHandlerInterface,
     Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener,
     Symfony\Component\Security\Http\HttpUtils,
-    Symfony\Component\Security\Http\Session\SessionAuthenticationStrategyInterface
+    Symfony\Component\Security\Http\Session\SessionAuthenticationStrategyInterface,
+    Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface
 ;
 
 class LdapListener extends AbstractAuthenticationListener
 {
-    public function __construct(SecurityContextInterface $securityContext,
+    public function __construct(TokenStorageInterface $tokenStorage,
                                 AuthenticationManagerInterface $authenticationManager,
                                 SessionAuthenticationStrategyInterface $sessionStrategy,
                                 HttpUtils $httpUtils,
@@ -32,7 +33,7 @@ class LdapListener extends AbstractAuthenticationListener
                                 CsrfProviderInterface $csrfProvider = null)
     {
         parent::__construct(
-            $securityContext,
+            $tokenStorage,
             $authenticationManager,
             $sessionStrategy,
             $httpUtils,
